@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from "react";
+import "./App.css";
+
+import { context } from "./ContextProvider";
+import { Routes, Route } from "react-router-dom";
+import Main from "./Main";
+import Start from "./Start";
 
 function App() {
+  const contextValues = useContext(context);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      style={{ backgroundColor: contextValues?.modeStyle.backgroundColor }}
+      className="App"
+    >
+      <Routes>
+        <Route path="/" element={<Start></Start>} />
+        <Route path="/main" element={<Main></Main>}></Route>
+      </Routes>
     </div>
   );
 }
