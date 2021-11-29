@@ -91,11 +91,13 @@ export const quiz: Quiz = {
           negativePoints: 2,
         },
         {
-          question: "Is dumbledore gay",
+          question: "Who does the elder wand originally belong to in the end?",
           points: 5,
           options: [
-            { text: "No", isRight: false },
-            { text: "Yes", isRight: true },
+            { text: "Voldemort", isRight: false },
+            { text: "Harry Potter", isRight: true },
+            { text: "Draco Malfoy", isRight: false },
+            { text: "Dumbledore", isRight: false },
           ],
         },
         {

@@ -14,7 +14,6 @@ import {
 import Header from "./Components/Header";
 import Options from "./Components/Options";
 import Timer from "./Components/Timer";
-
 import { useLocation } from "react-router-dom";
 import { Categories, Username } from "./types/quiz.types";
 import { quiz } from "./data";
